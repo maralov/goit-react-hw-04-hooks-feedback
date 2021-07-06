@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import { Table } from 'antd';
 import { Row, Col } from 'antd';
 
@@ -7,11 +9,7 @@ export default function Statistics(props) {
   const data = [
     {
       key: '1',
-      good: 1,
-      neutral: 32,
-      bad: 13,
-      total: 132,
-      positiveFeedback: '45%',
+      ...props,
     },
   ];
 
@@ -28,3 +26,11 @@ export default function Statistics(props) {
     </Row>
   );
 }
+
+Statistics.propTypes = {
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
+  total: PropTypes.number.isRequired,
+  positivePercentage: PropTypes.string.isRequired,
+};

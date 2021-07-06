@@ -21,7 +21,7 @@ export const columns = [
   },
   {
     title: 'Positive feedback',
-    dataIndex: 'positiveFeedback',
-    key: 'positiveFeedback',
+    dataIndex: 'positivePercentage',
+    key: 'positivePercentage',
   },
 ];
