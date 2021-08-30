@@ -14,9 +14,7 @@ export default class App extends Component {
     bad: 0,
   };
 
-  handleIncrementFeedback = e => {
-    const name = e.target.closest('button').name;
-
+  handleIncrementFeedback = name => {
     this.setState(prevState => ({
       [name]: prevState[name] + 1,
     }));

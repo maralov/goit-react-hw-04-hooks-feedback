@@ -8,7 +8,7 @@ export default function FeedbackOptions({ options, onLeaveFeedback }) {
     <Row gutter={16}>
       {options.map(btn => (
         <Col key={`${btn}-btn`} className="gutter-row" span={3}>
-          <Button name={btn} block onClick={onLeaveFeedback}>
+          <Button  block onClick={() => onLeaveFeedback(btn)}>
             {btn}
           </Button>
         </Col>
